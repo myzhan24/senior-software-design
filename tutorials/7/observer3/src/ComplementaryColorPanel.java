@@ -25,10 +25,7 @@ public class ComplementaryColorPanel extends ColorPanel implements PropertyChang
 	}
 	
 	@Override
-	public void propertyChange(PropertyChangeEvent e) {
-		// TODO Auto-generated method stub
-		System.out.println("property change"+e.getPropertyName());
-		
+	public void propertyChange(PropertyChangeEvent e) {		
 		ColorPanel cp = (ColorPanel) e.getSource();
 		
 		float [] hsb  = cp.getHSB();
@@ -38,7 +35,6 @@ public class ComplementaryColorPanel extends ColorPanel implements PropertyChang
 		
 		Color complementaryColor = Color.getHSBColor(h,s,b);
 		setColor(complementaryColor);
-		
 	}
 	
 	public void registerPanel(ColorPanel cp)
