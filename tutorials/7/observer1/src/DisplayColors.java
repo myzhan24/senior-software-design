@@ -1,4 +1,3 @@
-package observer1;
 
 import javax.swing.*;
 import javax.swing.event.*;
@@ -57,7 +56,7 @@ public class DisplayColors implements ChangeListener {
 	JSlider slider = new JSlider();
 	// WHAT GOES HERE?
 	// You need to make it possible for the app to get the slider values out.
-
+	slider.addChangeListener(this);
 	slider.setValue(slider.getMinimum());
 	return slider;
     }
@@ -101,7 +100,8 @@ public class DisplayColors implements ChangeListener {
 	    Color complementaryColor = Color.getHSBColor(complementaryHue, newSaturation, newBrightness);
 	    // WHAT GOES HERE?
 	    // You need to update the two color panels with the appropriate colors
-
+	    originalColorPanel.setColor(newColor);
+	    complementaryColorPanel.setColor(complementaryColor);
 	}
     }
 }
