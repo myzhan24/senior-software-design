@@ -3,8 +3,9 @@ import java.util.Arrays;
 
 import javax.swing.JSlider;
 import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
-public class OriginalColorPanel extends ColorPanel {
+public class OriginalColorPanel extends ColorPanel  implements ChangeListener{
 
 	public OriginalColorPanel(float h, float s, float b) {
 		super(h,s,b);
@@ -32,7 +33,13 @@ public class OriginalColorPanel extends ColorPanel {
 		}
 	
 		Color newColor = Color.getHSBColor(h,s,b);
+		//this.fireP
 		setColor(newColor);
 		
 	}
+	public void registerSlider(JSlider s)
+	{
+		s.addChangeListener(this);
+	}
+
 }

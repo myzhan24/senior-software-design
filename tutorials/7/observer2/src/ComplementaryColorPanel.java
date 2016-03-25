@@ -13,8 +13,7 @@ public class ComplementaryColorPanel extends ColorPanel {
 	@Override
 	public void stateChanged(ChangeEvent e){	
 		JSlider sl = (JSlider)e.getSource();
-		System.out.println("state change from ChangeEvent "+sl.getName()+" my color is "+color.toString()+" my current hsb is "+Arrays.toString(getHSB()));
-		
+		//System.out.println("state change from ChangeEvent "+sl.getName()+" my color is "+color.toString()+" my current hsb is "+Arrays.toString(getHSB()));
 		float value = (float)sl.getValue()/100;
 		
 		switch(sl.getName())
